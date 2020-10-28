@@ -56,6 +56,8 @@ function fetchGitHubInformation(event) {
         function(firstResponse, secondResponse) {
             var userData = firstResponse[0];
             var repoData = secondResponse[0];
+            console.log(userData);
+            console.log(repoData);
             $("#gh-user-data").html(userInformationHTML(userData));
             $("#gh-repo-data").html(repoInformationHTML(repoData));
         },
